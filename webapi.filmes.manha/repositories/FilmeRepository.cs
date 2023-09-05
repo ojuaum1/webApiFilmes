@@ -1,11 +1,10 @@
-﻿
+﻿using PrimeiroProjeto.Interfaces;
 using System.Data.SqlClient;
-using System.Runtime.CompilerServices;
 using webapi.filmes.manha.Domains;
 
-namespace PrimeiroProjeto.Repositories
+namespace webapi.filmes.manha.Repositories
 {
-    public class FilmeRepository : Interfaces.IFilmesRepository
+    public class FilmeRepository : IFilmeRepository
     {
         private string StringConexao = "Data Source = note03-s15; Initial Catalog = Filmes; User Id = sa; pwd = Senai@134; TrustServerCertificate = true";
         public void AtualizarIdCorpo(FilmeDomain Filme)

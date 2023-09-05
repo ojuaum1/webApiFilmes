@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.Serialization;
 using webapi.filmes.manha.Domains;
@@ -16,6 +17,7 @@ namespace webapi.filmes.manha.controllers
 
     // define que o tipo de resposta da api sera no forma json
     [Produces("application/json")]
+    [Authorize(Roles = "administrador,comum")]
 
     //Método controlador que herda da controller base 
     //onde será criado os Endpoints (rotas)
@@ -35,6 +37,7 @@ namespace webapi.filmes.manha.controllers
 
         }
         [HttpGet]
+       
         public ActionResult Get()
         {
 

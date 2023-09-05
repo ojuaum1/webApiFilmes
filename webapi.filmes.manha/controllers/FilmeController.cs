@@ -11,7 +11,7 @@ namespace PrimeiroProjeto.Controllers
     [Produces("application/json")]
     public class FilmeController : ControllerBase
     {
-        private IFilmesRepository _filmeRepository { get; set; }
+        private IFilmeRepository _filmeRepository { get; set; }
 
         public FilmeController()
         {

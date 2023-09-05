@@ -3,7 +3,7 @@ using webapi.filmes.manha.Domains;
 
 namespace PrimeiroProjeto.Interfaces
 {
-    public interface IFilmesRepository
+    public interface IFilmeRepository
     {
         void Cadastrar(FilmeDomain novoFilme);
         List<FilmeDomain> ListarFilme();
